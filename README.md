@@ -31,4 +31,20 @@ aws --endpoint-url=http://localhost:4566 ec2 run-instances --image-id ami-a1bf2e
 
 # lista as instâncias em execução
 aws --endpoint-url=http://localhost:4566 ec2 describe-instances
+
+# para uma instância
+aws ec2 --endpoint-url=http://localhost:4566 stop-instances\
+ --instance-ids <INSTANCEID>
+
+# lista as instâncias exibindo o InstanceId  e o State
+aws --endpoint-url=http://localhost:4566 ec2 describe-instances\
+ --query='Reservations[*].Instances[*].[InstanceId,State]'
+
+# inicia uma instância parada
+aws --endpoint-url=http://localhost:4566 ec2 start-instances\
+ --instance-ids <INSTANCEID>
+
+# exclui uma instância
+aws --endpoint-url=http://localhost:4566 ec2 terminate-instances\
+ --instance-ids <INSTANCEID>
 ```
