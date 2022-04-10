@@ -48,3 +48,5 @@ aws --endpoint-url=http://localhost:4566 ec2 start-instances\
 aws --endpoint-url=http://localhost:4566 ec2 terminate-instances\
  --instance-ids <INSTANCEID>
 ```
+## Links
+- [Create an IPv4-enabled VPC and subnets using the AWS CLI](https://docs.aws.amazon.com/vpc/latest/userguide/vpc-subnets-commands-example.html)
